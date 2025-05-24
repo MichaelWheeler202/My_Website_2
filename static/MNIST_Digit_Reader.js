@@ -203,7 +203,7 @@ $(document).ready(function () {
         //send pixel array to python script to read number.
         $.ajax({
            type: "POST",
-           url: '/read-number/',
+           url: '/read-number',
            datatype: "json",
            data: { csrfmiddlewaretoken: csrftoken, grid: jObject},
            success: function callback(response){
