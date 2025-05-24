@@ -11,7 +11,7 @@ migrate the static files if changes were made, and restart the server was too mu
 project like this when there are other things I want/need to be doing.
 With this project I have a few ideas for ways to mitigate this.
 a. Moving my Resume to be a google drive link
-b. Adding some functionality to the app itself to make these admin tasks a push of a button.
+b. Create a stop, update, and restart script to improve this.
 
 3. Improve the front end.  My front end was trash.  I'm a BE developer, but I should spend some time here
 to make this look better and add some additional content.
