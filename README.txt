@@ -12,6 +12,8 @@ project like this when there are other things I want/need to be doing.
 With this project I have a few ideas for ways to mitigate this.
 a. Moving my Resume to be a google drive link
 b. Create a stop, update, and restart script to improve this.
+github flow ex: https://ihenrywu.medium.com/how-to-update-python-flask-code-to-aws-ec2-with-an-automated-process-set-up-a-continuous-1c01ab321b8c
+
 
 3. Improve the front end.  My front end was trash.  I'm a BE developer, but I should spend some time here
 to make this look better and add some additional content.
