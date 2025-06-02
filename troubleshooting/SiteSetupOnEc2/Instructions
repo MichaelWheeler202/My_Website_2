@@ -1,4 +1,4 @@
-ssh -i "<PEM_FILE>" ec2-user@<IP_ADDRESS>
+ssh -i "<PEM_FILE>" ec2-user@52.55.210.229
 
 New Instance Setup
 ________________________
@@ -72,3 +72,7 @@ sudo service nginx restart
 
 RUNNING SCRIPTS ON STARTUP
 https://saturncloud.io/blog/running-scripts-at-startup-on-aws-ec2-instances-a-comprehensive-guide/
+
+CHANGE TO DIFF USER
+________________________
+sudo su - user-name
