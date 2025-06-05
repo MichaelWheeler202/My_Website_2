@@ -28,24 +28,19 @@ jobs:
         ssh $SSH_OPTIONS ec2-user@${{ secrets.EC2_HOST }} "
           # login to script runner account
           sudo su - script-runner
+          cd /home/script-runner/My_Website_2
           
-          # Remove the existing virtual environment (if necessary)
-          rm -rf /home/script-runner/My_Website_2
+          # Update
+          git fetch
+          git pull
           
-          # Download repo
-          git clone https://github.com/MichaelWheeler202/My_Website_2.git
-          
-          # Create a new virtual environment
-          python3.11 -m venv /home/script-runner/my_website_venv
-        
           # Activate the virtual environment
           source /home/script-runner/my_website_venv/bin/activate
         
           # Install the required packages
           TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt 
         
-        
-          
+          sudo systemctl daemon-reload  
           sudo systemctl restart gunicorn
           sudo systemctl restart nginx
         "
