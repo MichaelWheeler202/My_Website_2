@@ -2,6 +2,8 @@ ssh -i "<PEM_FILE>" ec2-user@52.55.210.229
 
 New Instance Setup
 ________________________
+https://www.geeksforgeeks.org/how-to-deploy-flask-app-on-aws-ec2-instance/
+
 sudo adduser script-runner
 sudo passwd script-runner
 usermod -aG wheel script-runner
@@ -67,7 +69,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 sudo systemctl status gunicorn
 sudo service nginx restart
-
+sudo systemctl status nginx
 
 
 RUNNING SCRIPTS ON STARTUP

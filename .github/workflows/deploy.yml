@@ -44,8 +44,10 @@ jobs:
           # Install the required packages
           TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt 
         
-          # Additional commands to restart your application (if necessary)
+        
+          
           sudo systemctl restart gunicorn
+          sudo systemctl restart nginx
         "
         
       env:
