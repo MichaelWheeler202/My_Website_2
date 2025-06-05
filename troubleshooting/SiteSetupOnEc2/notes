@@ -1,4 +1,4 @@
-ssh -i "<PEM_FILE>" ec2-user@52.55.210.229
+ssh -i "<PEM_FILE>" ec2-user@ip
 
 New Instance Setup
 ________________________
