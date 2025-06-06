@@ -16,10 +16,11 @@ jobs:
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key && chmod 600 private_key
         ssh -o StrictHostKeyChecking=no -i private_key ${{ secrets.USERNAME }}@${{ secrets.EC2_HOST }} "
           sudo su - script-runner &&
-          cd /home/script-runner/My_Website_2 &&
+          cd My_Website_2 &&
           git fetch &&
           git pull &&
-          source /home/script-runner/my_website_venv/bin/activate &&
+          cd .. &&
+          source my_website_venv/bin/activate &&
           TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt &&
           sudo systemctl daemon-reload  &&
           sudo systemctl restart gunicorn &&
