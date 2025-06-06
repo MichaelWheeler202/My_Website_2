@@ -11,30 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
     - name: Deploy to AWS EC2
       run: |
-        
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > private_key && chmod 600 private_key
-
-        # SSH into EC2 and set up the virtual environment and install dependencies
         ssh -o StrictHostKeyChecking=no -i private_key ${{ secrets.USERNAME }}@${{ secrets.EC2_HOST }} "
-          # login to script runner account
           sudo su - script-runner &&
           cd /home/script-runner/My_Website_2 &&
-          
-          # Update
           git fetch &&
           git pull &&
-          
-          # Activate the virtual environment
           source /home/script-runner/my_website_venv/bin/activate &&
-        
-          # Install the required packages
           TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt &&
-        
           sudo systemctl daemon-reload  &&
           sudo systemctl restart gunicorn &&
           sudo systemctl restart nginx
