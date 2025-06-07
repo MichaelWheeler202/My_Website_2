@@ -19,5 +19,8 @@ jobs:
           git fetch &&
           git pull &&
           source /home/script-runner/my_website_venv/bin/activate &&
-          TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt
+          TMPDIR=/home/script-runner/pip-cache pip3 install --cache-dir=/home/script-runner/pip-cache -r /home/script-runner/My_Website_2/requirements.txt &&
+          sudo systemctl daemon-reload  &&
+          sudo systemctl restart gunicorn &&
+          sudo systemctl restart nginx
         "
