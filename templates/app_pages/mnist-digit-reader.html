@@ -84,7 +84,7 @@
                 On the client side, there is an html grid.  Javascript event listeners listen for the user clicking and
                 moving their mouse on the grid to let the user draw.  When the user clicks the "Guess Number" button
                 a javascript function parses the grid to make a JSON object containing which squares are filled and
-                which ones are not.  This object is then sent to a function on the Django server through an ajax
+                which ones are not.  This object is then sent to a function on the Flask server through an ajax
                 request.  This function uses a tensorflow convolutional neural network model that was built and trained
                 off the MNIST digit set.  The model then tries to guess which number the user drew, and the result is
 		        returned to the client.
