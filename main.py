@@ -14,9 +14,9 @@ digit_reader = keras.models.load_model('MNIST-Reader.h5')
 def homePage():
     return render_template('app_pages/home.html')
 
-@app.route("/contact-info")
+@app.route("/about-me")
 def contactInfo():
-    return render_template('app_pages/contact-info.html')
+    return render_template('app_pages/about-me.html')
 
 @app.route("/mnist-digit-reader")
 def digitReader():
