@@ -3,6 +3,7 @@
   background: linear-gradient(to bottom, #f4f4f9 0%, #e1e1e8 40%, #d0d0da 80%, #bebed1 100%);
   color: #2e2e3e;
   overscroll-behavior: none;
+  min-height: 100dvh;
 }
 
 .site-header {
