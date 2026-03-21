@@ -17,4 +17,4 @@ DONE
 
 3. Improve the front end.  My front end was trash.  I'm a BE developer, but I should spend some time here
 to make this look better and add some additional content.
-TODO
+Improved - maybe will come back to this.
